@@ -19,11 +19,18 @@
  .pr-0 {
   padding-right: 0px;
  }
+ .px-5 {
+  padding-left: 5em;
+  padding-right: 5em;
+ }
  .p-4 {
   padding: 4em;
  }
  .mr-0 {
   margin-right: 0px;
+ }
+ .m-5 {
+  margin: 5em;
  }
  .ml-0 {
   margin-left: 0px;
@@ -37,22 +44,34 @@
 .services-component {
   padding-top: 5em;
   padding-bottom: 5em;
-  /* background: url("https://services.titaniumlimousines.com.sg/wp-content/uploads/2023/01/why-choose-us-img.jpg");
-   */
+  background: url("https://services.titaniumlimousines.com.sg/wp-content/uploads/2023/01/why-choose-us-img.jpg");
+  
 }
 .services-component h2, .demo h2, .testimonial h2 {
   line-height: 1.5;
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(240, 231, 231, 0.8);
   text-transform: uppercase;
   font-size: 40px;
   font-weight: 600;
+}
+
+#section-counter {
+  background-color: rgb(10, 9, 9)!important;
+}
+
+#section-counter .number {
+  color: white;
+}
+
+#section-counter span {
+  color: rgb(187, 185, 185);
 }
 
 .services-component .subheading, .demo .subheading, .testimonial .subheading {
   font-size: 18px;
   display: block;
   margin-bottom: 5px;
-  color: #1089ff;
+  color: rgb(232, 225, 225);
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 2px;
@@ -68,15 +87,7 @@
 .service-content h1{
   color: white;
 }
- .service-item:hover {
-  transform: scale(1.1);
-  z-index: 1000;
-  transition: all, 0.5s;
- }
- .service-item:left {
-  transform: scale(1);
-  transition: all, 0.5s;
- }
+
 
 
 :root {

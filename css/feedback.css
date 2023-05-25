@@ -1,6 +1,11 @@
 body .testimonial {
     padding: 100px 0;
     cursor: pointer;
+   
+    background-image: url("https://services.titaniumlimousines.com.sg/wp-content/uploads/2023/03/testimonial-section-scaled.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   body .testimonial .row .tabs {
     all: unset;
@@ -18,7 +23,7 @@ body .testimonial {
     content: "";
     width: 50px;
     height: 50px;
-    background-color: #71b85f;
+    background-color: #eff8ed;
     border-radius: 50%;
   }
   body .testimonial .row .tabs li.active::after {
@@ -26,7 +31,7 @@ body .testimonial {
     content: "";
     width: 30px;
     height: 30px;
-    background-color: #71b85f;
+    background-color: #f2f7f1;
     border-radius: 50%;
   }
   body .testimonial .row .tabs li:nth-child(1) {
@@ -135,7 +140,7 @@ body .testimonial {
     justify-content: center;
   }
   body .testimonial .row .carousel .carousel-indicators li {
-    background: #000;
+    background: #f5f1f1;
     background-clip: padding-box;
     height: 2px;
   }
@@ -146,10 +151,10 @@ body .testimonial {
     font-size: 18px;
     line-height: 1.72222;
     font-weight: 500;
-    color: rgba(0, 0, 0, 0.7);
+    color: rgba(197, 192, 192, 0.7);
   }
   body .testimonial .row .carousel .carousel-inner .carousel-item .quote-wrapper h3 {
-    color: #000;
+    color: #cfc7c7;
     font-weight: 700;
     margin-top: 37px;
     font-size: 20px;
