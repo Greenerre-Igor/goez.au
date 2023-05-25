@@ -1,0 +1,169 @@
+strong {
+  color: #01d28e;
+}
+#form-service-select {
+  color: rgba(255, 255, 255, 0.7) !important;
+  background-color: #1089ff !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important
+}
+.services-section
+.blog{
+  position: relative;
+  width: 100%;
+  height: 30em;
+  padding: 3em;
+  background-size:cover;
+  
+  box-shadow: 3px 3px 20px rgba(0,0,0,0.5);
+  margin: auto;
+  overflow: hidden;
+  max-width: 100%;
+}
+.blog h1 {
+  color: white;
+  transition: all, 1s;
+  font-size: 1.5em;
+}
+.blog > div > h3 {
+  display: none;
+  transition: all, 1s;
+}
+.blog:hover > div > h3 {
+  display: block;
+}
+.blog-1 {
+  background: url('../images/air.jpg') no-repeat;
+}
+.blog-1:hover, .blog-2:hover, .blog-3:hover, .blog-4:hover {
+  transform: scale(1.05);
+}
+.blog-1:hover > div > h1, .blog-2:hover > div > h1, .blog-3:hover > div > h1, .blog-4:hover > div > h1 {
+  display: none;
+}
+.blog-2 {
+  background: url('../images/corporate.jpg') no-repeat;
+}
+.blog-3 {
+  background: url('../images/local.jpg') no-repeat;
+}
+.blog-4 {
+  background: url('../images/milestone.jpg') no-repeat;
+}
+.services-section
+.blog *{
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+.services-section
+.blog:hover .color-overlay{
+  background:rgba(0, 0, 0, 0.6);
+}
+.services-section
+.blog:hover .info{
+  bottom: -3em;
+  opacity: 1;
+}
+.services-section
+.blog, .color-overlay{
+   border-radius: 0.7em;
+}
+.services-section
+.color-overlay{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  transition: 0.7s all;
+  z-index: 1;
+}
+.services-section
+.title-box{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-top: 2em;
+}
+.services-section
+.title-box hr{
+  margin-top: -0.4em;
+  margin-bottom: 1em;
+  width: 5em;
+  height: 0.25em;
+  box-sizing: content-box;
+  border: none;
+  background: #D0BC57;
+}
+.services-section
+h3{
+   display: inline-block;
+   font-weight: 500;
+   letter-spacing: 2px;
+   font-size: 1.4em;
+   
+   text-align: center;
+}
+.services-section
+.intro{
+    width: 170px;
+  margin: 0 auto;
+  color: #949494;
+  font-family: 'Droid Serif', serif;
+  font-size: 13px;
+  font-style: italic;
+  line-height: 18px;
+}
+
+.services-section
+.info{
+  font-family: 'Droid Serif', serif;
+  font-size: 1.2em;
+  color: #eae5e5;
+  line-height: 1.1em;
+  padding: 0;
+ 
+  position: relative;
+  bottom: -4em;
+  opacity: 0;
+  background: transparent;
+  transition: opacity 0.3s, bottom 0.3s;
+  text-align: center;
+}
+
+.services-section
+.footer{
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10em;
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9));
+  border-radius:  0 0 0.7em 0.7em;
+}
+.services-section
+.footer > .icon-holder{
+  position: absolute;
+  bottom: 0;
+  height: 3em;
+  width: 100%;
+  display: inline-block;
+  font-size: 1.2em;
+  padding: 0 2em;
+  
+}
+
+.icon-holder i{
+  
+  color: #D0BC57;
+}
+
+.icon-holder span, h3{
+  color: #ffffff;
+}
+
+space{
+  display: inline-block;
+  width: 0.6em;
+  height: 1em;
+}
