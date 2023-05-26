@@ -3,7 +3,7 @@ strong {
 }
 #form-service-select {
   color: rgba(255, 255, 255, 0.7) !important;
-  background-color: #1089ff !important;
+  background-color: #343a40 !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important
 }
 .service-item img:hover {
