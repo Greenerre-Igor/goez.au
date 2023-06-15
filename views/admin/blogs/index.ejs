@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <%- include('../../partials/head'); %>
+</head>
+
+<body>
+    <%- include('../../partials/header'); %>
+
+        <div class="page-content">
+            <div class="row">
+                <%- include('../../partials/sidebar'); %>
+                    <div class="col-md-10">
+                        <div class="content-box-large">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <%= title %>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <a class="btn btn-success" href="/admin/blogs/create">New Blog</a>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Image</th>
+                                                <th>Content</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% if(blogs.length === 0) { %>
+                                                <tr>
+                                                    <td colspan="4">
+                                                        No record found
+                                                    </td>
+                                                </tr>
+                                            <% } %>
+                                            <% for(let i=0; i < blogs.length; i++) { %>
+                                                    <tr> 
+                                                        <td onclick="detailPage('<%= blogs[i]._id %>')"> <%= (i+1) %> </td>
+                                                        <td onclick="detailPage('<%= blogs[i]._id %>')">
+                                                            <%= blogs[i].image %>
+                                                        </td>
+                                                        <td onclick="detailPage('<%= blogs[i]._id %>')">
+                                                            <%= blogs[i].content %>
+                                                        </td>
+                                                        <td>
+                                                            <form action="/admin/blogs/delete" method="post">
+                                                                <input type="hidden" value="<%= blogs[i]._id %>" />
+                                                                <button class="btn btn-danger btn-sm" type="submit">
+                                                                    <span class="glyphicon glyphicon-trash"></span>
+                                                                </button>
+                                                            </form>
+                                                            
+                                                        </td>
+                                                    </tr>
+                                                <% } %>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <%- include('../../partials/footer'); %>
+</body>
+<script>
+    function detailPage(id) {
+        window.location.assign("/admin/blogs/" + id);
+    }
+
+</script>
+
+
+<%- include('../../partials/foot'); %>
+
+</html>

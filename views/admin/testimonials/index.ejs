@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <%- include('../../partials/head'); %>
+</head>
+
+<body>
+    <%- include('../../partials/header'); %>
+
+        <div class="page-content">
+            <div class="row">
+                <%- include('../../partials/sidebar'); %>
+                    <div class="col-md-10">
+                        <div class="content-box-large">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <%= title %>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <a class="btn btn-success" href="/admin/testimonials/create">New Testimonial</a>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Name</th>
+                                                <th>Job</th>
+                                                <th>Feedback</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% for(let i=0; i < testimonials.length; i++) { %>
+                                                    <tr> 
+                                                        <td onclick="detailPage('<%= testimonials[i]._id %>')"> <%= (i+1) %> </td>
+                                                        <td onclick="detailPage('<%= testimonials[i]._id %>')">
+                                                            <%= testimonials[i].name %>
+                                                        </td>
+                                                        <td onclick="detailPage('<%= testimonials[i]._id %>')">
+                                                            <%= testimonials[i].job %>
+                                                        </td>
+                                                        <td onclick="detailPage('<%= testimonials[i]._id %>')">
+                                                            <%= testimonials[i].feedback %>
+                                                        </td>
+                                                        <td>
+                                                            <form action="/admin/testimonials/delete" method="post">
+                                                                <input type="hidden" value="<%= testimonials[i]._id %>" />
+                                                                <button class="btn btn-danger btn-sm" type="submit">
+                                                                    <span class="glyphicon glyphicon-trash"></span>
+                                                                </button>
+                                                            </form>
+                                                            
+                                                        </td>
+                                                    </tr>
+                                                <% } %>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <%- include('../../partials/footer'); %>
+</body>
+<script>
+    function detailPage(id) {
+        window.location.assign("/admin/testimonials/" + id);
+    }
+
+</script>
+
+
+<%- include('../../partials/foot'); %>
+
+</html>
