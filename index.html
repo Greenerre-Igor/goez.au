@@ -65,6 +65,7 @@
 	          <li class="nav-item"><a href="#services-component" class="nav-link">Services</a></li>
 	          <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
 	          <li class="nav-item"><a href="#booking-form" class="nav-link">Enquire Now</a></li>
+            <li class="nav-item"><a href="booking.html" class="nav-link">Book</a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -100,8 +101,9 @@
     			<div class="col-md-12	featured-top" style="z-index: 3;">
             <div class="hidden-indicator" id="booking-form"></div>
     				<div class="row no-gutters">
+              <div class="col-md-8"></div>
 	  					<div class="col-md-4 d-flex align-items-center animate__animated animate__bounce">
-	  						<form action="/admin/inquiries/create" method="post" class="col-md-12 request-form ftco-animate bg-dark">
+	  						<form name="enquiryForm" class="col-md-12 request-form ftco-animate bg-dark">
 		          		<h2>Enquire Now!</h2>
 			    				<div class="form-group">
 			    					<label for="" class="label">Name</label>
@@ -136,11 +138,11 @@
 		              </div>
 		              
 			            <div class="form-group">
-			              <input type="submit" value="Submit" class="btn btn-secondary py-3 px-4">
+			              <input type="button" value="Submit" onclick="submitEnquiry()" class="btn btn-secondary py-3 px-4">
 			            </div>
 			    			</form>
 	  					</div>
-	  					<div class="col-md-8 d-flex align-items-center">
+	  					<!-- <div class="col-md-8 d-flex align-items-center">
 	  						<div class="services-wrap rounded-right w-100 enquire-from-info">
 	  							<h3 class="heading-section mb-4">Better Way to Get Your Perfect Cars and Drivers</h3>
 	  							<div class="row d-flex mb-4">
@@ -171,7 +173,7 @@
 					        </div>
 
 	  						</div>
-	  					</div>
+	  					</div> -->
 	  				</div>
 				
           </div>
@@ -221,7 +223,7 @@
       <span class="subheading text-center">What we offer</span>
       <h2 class="mb-2 text-center"><b>Our Latest Services</b></h2>
       <div class="row services-section mr-0 ml-0 p-4">
-        <div class="col-md-3 my-3" onclick="cScroll('service-item-airport')">
+        <!-- <div class="col-md-3 my-3" onclick="cScroll('service-item-airport')">
             <div class="blog blog-1">
               <div class="title-box">
                 <h1>Airport Transfer</h1>
@@ -260,117 +262,19 @@
           </div>
          <div class="color-overlay"></div>
         </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
-    <section>
-      <div class="row ml-0 mr-0 px-5 service-item service-item-left" id="service-item-airport">
-        <div class="col-md-5 text-center p-5">
-          <img src="frontend/images/air.jpg" width="100%" style="aspect-ratio: 1.5;" onclick="contactUs('airport')"/>
-        </div>
-        <div class="col-md-7 text-left p-5 d-flex flex-column align-items-start justify-content-center">
-          <h2>Airport Transfer</h2>
-          <p>Goez offers a reliable, safe and comfortable airport transfer service. Our chauffeurs are professionally trained and certified to ensure that your ride is smooth and stress-free so you can focus on the important things in life. Our drivers have extensive knowledge of the local area to make sure you get to your desired destination with minimum fuss.
-          </p>
-          <button type="button" class="btn" onclick="contactUs('airport')">Contact US</button>
-        </div>
-      </div>
-      <div class="row ml-0 mr-0 px-5 service-item service-item-right" id="service-item-corporate">   
-        <div class="col-md-7 text-left p-5 d-flex flex-column align-items-start justify-content-center">
-          <h2>Corporate events and conferences</h2>
-          <p>Goez is the perfect way to make sure that your corporate events and conferences proceed flawlessly. Our professional limo drivers will ensure comfort, safety and convenience when travelling to meetings or venues for any kind of event. We understand the importance of security and privacy especially when handling high-profile individuals, and ensure the utmost discretion with all our clients.
-          </p>
-          <button type="button" class="btn" onclick="contactUs('corporate')">Contact US</button>
-        </div>
-        <div class="col-md-5 text-center p-5">
-          <img src="frontend/images/corporate.jpg" width="100%" style="aspect-ratio: 1.5;" onclick="contactUs('corporate')"/>
-        </div>
-      </div>
-      <div class="row ml-0 mr-0 px-5 service-item service-item-left" id="service-item-local">
-        <div class="col-md-5 text-center p-5">
-          <img src="frontend/images/local.jpg" width="100%" style="aspect-ratio: 1.5;" onclick="contactUs('local')"/>
-        </div>
-        <div class="col-md-7 text-left p-5 d-flex flex-column align-items-start justify-content-center">
-          <h2>Local Tours</h2>
-          <p>Goez offers exclusive local tours around Brisbane with our luxury fleets. Our experienced chauffeurs will ensure you get the most out of your sightseeing experience while ensuring a safe and smooth journey throughout. We promise to make your trip memorable and enjoyable from start to finish!
-
-          </p>
-          <button type="button" class="btn" onclick="contactUs('local')">Contact US</button>
-        </div>
-      </div>
-      <div class="row ml-0 mr-0 px-5 service-item service-item-right" id="service-item-milestone">   
-        <div class="col-md-7 text-left p-5 d-flex flex-column align-items-start justify-content-center">
-          <h2>Milestones Events</h2>
-          <p>Goez offers a special service for personal milestone events such as weddings, graduations and proms. Our experienced chauffeurs will take care of all your necessary transport needs with our luxury vehicles to make sure you arrive in style.
-
-          </p>
-          <button type="button" class="btn" onclick="contactUs('milestone')">Contact US</button>
-        </div>
-        <div class="col-md-5 text-center p-5">
-          <img src="frontend/images/milestone.jpg" width="100%" style="aspect-ratio: 1.5;" onclick="contactUs('milestone')"/>
-        </div>
-      </div>
-     
+    <section id="blogs-section">
     </section>
 
     <section class="testimonial" id="testimonials">
       <span class="subheading text-center">TESTIMONIALS</span>
       <h2 class="text-center mb-5">HAPPY CLIENTS</h2>
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-6 d-none d-lg-block">
-                  <ol class="carousel-indicators tabs">
-                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
-                          <figure>
-                              <img src="https://livedemo00.template-help.com/wt_62267_v8/prod-20823-one-service/images/testimonials-01-179x179.png" class="img-fluid" alt="">
-                          </figure>
-                      </li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="1">
-                          <figure>
-                              <img src="https://livedemo00.template-help.com/wt_62267_v8/prod-20823-one-service/images/testimonials-02-306x306.png" class="img-fluid" alt="">
-                          </figure>
-                      </li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="2">
-                          <figure>
-                              <img src="https://livedemo00.template-help.com/wt_62267_v8/prod-20823-one-service/images/testimonials-03-179x179.png" class="img-fluid" alt="">
-                          </figure>
-                      </li>
-                  </ol>
-              </div>
-              <div class="col-lg-6 d-flex justify-content-center align-items-center">
-                  <div id="carouselExampleIndicators" data-interval="false" class="carousel slide" data-ride="carousel">
-                      
-                      <div class="carousel-inner">
-                          <div class="carousel-item active">
-                              <div class="quote-wrapper">
-                                  <p>Car and Driver's service is impeccable. From the moment I booked my ride to the final drop-off, the entire experience was seamless. The driver was punctual, courteous, and knew the city like the back of his hand.</p>
-                                  <h3>peter lee</h3>
-                              </div>
-                          </div>
-                          <div class="carousel-item">
-                              <div class="quote-wrapper">
-                                  <p>The comfort and safety of their vehicles are top-notch. I was a bit apprehensive about using a car service initially, but Goez's attention to detail put me at ease. The car was spotless, and the driver ensured I was securely fastened with a seatbelt.</p>
-                                  <h3>peter lee</h3>
-                              </div>
-                          </div>
-                          <div class="carousel-item">
-                              <div class="quote-wrapper">
-                                  <p>Their pricing is reasonable and transparent. I appreciate that Goez provides upfront pricing without any hidden fees or charges. The value for money is excellent, especially considering the quality of service they provide. Overall, I highly recommend using Goez for your transportation needs.</p>
-                                  <h3>peter lee</h3>
-                              </div>
-                          </div>
-                      </div>
-                      <ol class="carousel-indicators indicators">
-                          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                      </ol>
-                  </div>
-              </div>
-          </div>
+      <div class="container" id="testimonials-section">         
       </div>
-  </section>
+    </section>
 
   
   
@@ -433,8 +337,6 @@
         </div>
       </div>
     </footer>
-    
-  
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
@@ -459,5 +361,143 @@
   <script src="frontend/js/feedback.js"></script>
   <script src="frontend/js/scroll.js"></script>
   <script src="frontend/js/contact.js"></script>
+
+  <script>
+    var SERVER_URL = "http://localhost:80";
+    var SERVER_PUBLIC_URL = "http://localhost:80/public/files"
+    $(document).ready(function() {
+      
+      //Blogs Section
+      $.ajax({
+        type: 'GET',
+        url: SERVER_URL + '/blogs',
+        success: function(data) {
+          let str = "";
+          let services = "";
+          if(data.success) {
+            data.blogs.map((item, index) => {
+              let direction = index % 2 ? 'right' : 'left';
+              let directionClass = index % 2 ? 'service-item-left' : 'service-item-right';
+
+
+              str += '<div class="row ml-0 mr-0 px-5 service-item '+ directionClass +'" id="service-item-' + item.slug +'">'
+              
+              if(direction === 'left') {
+                str += '<div class="col-md-5 text-center p-5">';
+                str += '<img src="'+ SERVER_PUBLIC_URL + '/' + item.avatar +'" width="100%" style="aspect-ratio: 1.5;" onclick="contactUs(' + item.title + ')"/>';
+                str += '</div>';
+
+                str += '<div class="col-md-7 text-left p-5 d-flex flex-column align-items-start justify-content-center">';
+                str += '<h2>'+ item.title +'</h2>';
+                str += '<p>'+ item.content +'</p>';
+                str += '<button type="button" class="btn" onclick=\"contactUs(\'' + item.title + '\')\">Contact US</button>';
+                str += '</div>';
+              } else {
+                str += '<div class="col-md-7 text-left p-5 d-flex flex-column align-items-start justify-content-center">';
+                str += '<h2>'+ item.title +'</h2>';
+                str += '<p>'+ item.content +'</p>';
+                str += '<button type="button" class="btn" onclick=\"contactUs(\'' + item.title + '\')\">Contact US</button>';
+                str += '</div>';
+
+                str += '<div class="col-md-5 text-center p-5">';
+                str += '<img src="'+ SERVER_PUBLIC_URL + '/' + item.avatar +'" width="100%" style="aspect-ratio: 1.5;" onclick="contactUs(' + item.title + ')"/>';
+                str += '</div>';
+              }
+
+              services += '<div class="col-md-3 my-3" onclick="cScroll(service-item-'+ item.slug +')">';
+              services += '<div class="blog blog-'+(index + 1)+'">';
+              services += '<div class="title-box">';
+              services += '<h1>' + item.title + '</h1>';
+              services += '</div>';
+              services += '<div class="info"></div>';
+              services += '<div class="color-overlay"></div>';
+              services += '</div>';
+              services += '</div>';
+              
+              
+              str += '</div>';
+
+              
+            });
+            $('#blogs-section').html(str);
+            $('.services-section').html(services);
+
+            data.blogs.map((item, index) => {
+              $('.blog-' + (index+1)).css('background-image', 'url(' + SERVER_PUBLIC_URL + '/' + item.avatar + ')');
+
+            })
+          }
+        }
+      })
+
+      //Testimonials Section
+      $.ajax({
+        type: 'GET',
+        url: SERVER_URL + '/testimonials',
+        success: function(data) {
+          if(data.success) {
+            let str = "";
+            let figures = "";
+            let carousels = "";
+            let indicators = "";
+
+            str += "<div class='row'>";
+            str += "<div class='col-lg-6 d-none d-lg-block'>";
+            str += "<ol class='carousel-indicators tabs'>";  
+            data.testimonials.map((item, index) => {
+              let activeClass = index === 0 ? 'active' : '';
+              figures += '<li data-target="#carouselExampleIndicators" data-slide-to="'+index+'">';
+              figures += '<figure>';
+              figures += '<img src="'+ SERVER_PUBLIC_URL + '/' + item.avatar +'" class="img-fluid" alt="" width="210px" heght="210px">';
+              figures += '</figure>';
+              figures += '</li>';
+
+              carousels += '<div class="carousel-item '+ activeClass +'">';
+              carousels += "<div class='quote-wrapper'>";
+              carousels += "<p>" + item.feedback + "</p>";
+              carousels += "<h3>" + item.name + "</h3>";
+              carousels += "</div>";
+              carousels += "</div>";
+
+              indicators += '<li data-target="#carouselExampleIndicators" data-slide-to=\'' + index + '\' class="'+ activeClass  +'"></li>';
+            })
+            str += figures;
+            str += '</ol>';
+            str += '</div>';
+
+            str += '<div class="col-lg-6 d-flex justify-content-center align-items-center">';
+            str += '<div id="carouselExampleIndicators" data-interval="false" class="carousel slide" data-ride="carousel">';
+            str += '<div class="carousel-inner">';
+            str += carousels;
+            str += '</div>';
+
+            str += '<ol class="carousel-indicators indicators">';
+            str += indicators;
+            str += '</ol>';
+            str += '</div>';
+            str += '</div>';
+            str += '</div>';
+            
+            console.log("LOG>>>>>>>", str);
+            $('#testimonials-section').html(str);
+          } 
+        }
+      })
+    })
+
+    function submitEnquiry() {
+      alert(document.enquiryForm.time.value);
+      return;
+      $.ajax({
+        type: 'POST',
+        url: SERVER_URL + '/inquiries',
+        data: {
+          name: document.enquiryForm.name.value,
+          email: document.enquiryForm.email.value,
+          
+        } 
+      })
+    }
+  </script>
   </body>
 </html>

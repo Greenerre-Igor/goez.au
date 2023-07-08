@@ -85,14 +85,14 @@ strong {
   transition: all, 0.4s;
 }
 
-.blog-1 {
-  background: url('../images/air.jpg') no-repeat;
-}
+
 .blog-1:hover, .blog-2:hover, .blog-3:hover, .blog-4:hover {
   transform: scale(1.05);
   
 }
-
+/* .blog-1 {
+  background: url('../images/air.jpg') no-repeat;
+}
 .blog-2 {
   background: url('../images/corporate.jpg') no-repeat;
 }
@@ -101,7 +101,7 @@ strong {
 }
 .blog-4 {
   background: url('../images/milestone.jpg') no-repeat;
-}
+} */
 .services-section
 .blog *{
   position: relative;
