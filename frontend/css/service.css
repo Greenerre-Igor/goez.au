@@ -1,7 +1,7 @@
 strong {
   color: #01d28e;
 }
-#form-service-select {
+#form-service-select, #form-passengers-select, #form-location-select {
   color: rgba(255, 255, 255, 0.7) !important;
   background-color: #343a40 !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important
